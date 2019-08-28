@@ -70,7 +70,7 @@ class Game extends React.Component {
         this.setState({
             history: history.concat([
                 {
-                    squares: squares,
+                    squares: squares
                 }
             ]),
             stepNumber: history.length,
@@ -81,7 +81,7 @@ class Game extends React.Component {
     jumpTo(step) {
         this.setState({
             stepNumber: step,
-            xIsNext: (step % 2) === 0,
+            xIsNext: (step % 2) === 0
         });
     }
 
@@ -99,7 +99,7 @@ class Game extends React.Component {
                     <button onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
-        })
+        });
 
         let status;
         if (winner) {
@@ -114,7 +114,6 @@ class Game extends React.Component {
                         squares={current.squares}
                         onCLick={i => this.handleClick(i)}
                     />
-
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
