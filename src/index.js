@@ -7,7 +7,7 @@ function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
             {props.value}
-        </button >
+        </button>
     );
 }
 
@@ -50,12 +50,14 @@ class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            history: [{
-                squares: Array(9).fill(null),
-            }],
+            history: [
+                {
+                    squares: Array(9).fill(null),
+                }
+            ],
             stepNumber: 0,
             xIsNext: true,
-        }
+        };
     }
 
     handleClick(i) {
