@@ -56,7 +56,7 @@ class Game extends React.Component {
                 }
             ],
             stepNumber: 0,
-            xIsNext: true,
+            xIsNext: true
         };
     }
 
@@ -69,11 +69,13 @@ class Game extends React.Component {
         }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
-            history: history.concat([{
-                squares: squares,
-            }]),
+            history: history.concat([
+                {
+                    squares: squares,
+                }
+            ]),
             stepNumber: history.length,
-            xIsNext: !this.state.xIsNext,
+            xIsNext: !this.state.xIsNext
         });
     }
 
@@ -111,7 +113,7 @@ class Game extends React.Component {
                 <div className="game-board">
                     <Board
                         squares={current.squares}
-                        onCLick={(i) => this.handleClick(i)}
+                        onCLick={i => this.handleClick(i)}
                     />
 
                 </div>
